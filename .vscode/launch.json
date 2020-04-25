@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Filter country",
+            "type": "python",
+            "request": "launch",
+            "program": "filter_country.py",
+            "console": "integratedTerminal",
+            "args": [
+                "global.csv", "Russia", "local.csv"
+            ]
+        },
+        {
+            "name": "Draw graph",
+            "type": "python",
+            "request": "launch",
+            "program": "draw_graph.py",
+            "console": "integratedTerminal",
+            "args": [
+                "local.csv", "Russia", "local.png"
+            ]
+        }
+    ]
+}
