@@ -12,8 +12,8 @@ def read_input_rows(filename):
     with open(filename, 'r') as f:
         return [line.split(',') for line in f.readlines()]
 
-def get_dates(rows):
-    return [parse_datetime(dt) for dt in  rows[0][4:]]
+def get_dates(dates_row):
+    return [parse_datetime(dt) for dt in  dates_row[4:]]
 
 def parse_datetime(dt):
     return [int(x) for x in dt.split('/')]
@@ -42,7 +42,7 @@ if __name__== '__main__' :
     args = parse_args()
     try:
         rows = read_input_rows(args.input)
-        dates = get_dates(rows)
+        dates = get_dates(rows[0])
         cases = get_country_cases(rows, args.country)
         data = compile_data(dates, cases)
         write_data(args.output, data)
