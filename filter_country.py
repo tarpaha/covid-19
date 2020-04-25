@@ -21,10 +21,18 @@ def parse_datetime(dt):
 def get_country_cases(rows, country):
     country_rows = [row for row in rows if row[1] == country]
     if not country_rows:
-        raise Exception(f'Cannot find data row for country {args.country}')
-    if len(country_rows) > 1:
-        raise Exception(f'More that one data row for country {args.country}')
-    return [int(cell) for cell in country_rows[0][4:]]
+        raise Exception(f'Cannot find data row for country {country}')
+    print(f'Summing {len(country_rows)} provinces for country {country}')
+    return calculate_country_cases(country_rows)
+    return [int(cell) for cell in country_cases[4:]]
+
+def calculate_country_cases(country_rows):
+    country_cases = [int(case) for case in country_rows[0][4:]]
+    for row_id in range(1, len(country_rows)):
+        row = [int(case) for case in country_rows[row_id][4:]]
+        for col in range(len(country_cases)):
+            country_cases[col] += row[col]
+    return country_cases
 
 def compile_data(dates, cases):
     if len(dates) != len(cases):
