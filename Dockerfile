@@ -7,8 +7,6 @@ RUN \
 
 RUN pip3 install matplotlib numpy scipy
 
-COPY process.sh .
-COPY filter_country.py .
-COPY draw_graph.py .
+COPY src .
 
 ENTRYPOINT ["./process.sh"]
