@@ -24,7 +24,6 @@ def get_country_cases(rows, country):
         raise Exception(f'Cannot find data row for country {country}')
     print(f'Summing {len(country_rows)} provinces for country {country}')
     return calculate_country_cases(country_rows)
-    return [int(cell) for cell in country_cases[4:]]
 
 def calculate_country_cases(country_rows):
     country_cases = [int(case) for case in country_rows[0][4:]]
