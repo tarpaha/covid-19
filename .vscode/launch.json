@@ -3,6 +3,7 @@
     "configurations": [
         {
             "name": "Filter country",
+            "preLaunchTask": "Download global cases",
             "type": "python",
             "request": "launch",
             "program": "src/filter_country.py",
