@@ -1,0 +1,12 @@
+{
+    "version": "2.0.0",
+    "tasks": [{
+        "label": "Download global cases",
+        "command": "wget",
+        "type": "process",
+        "args": [
+            "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv",
+            "--output-document=out\\global.csv"
+        ]
+    }]
+}
