@@ -5,20 +5,20 @@
             "name": "Filter country",
             "type": "python",
             "request": "launch",
-            "program": "filter_country.py",
+            "program": "src/filter_country.py",
             "console": "integratedTerminal",
             "args": [
-                "global.csv", "Russia", "local.csv"
+                "out/global.csv", "Russia", "out/local.csv"
             ]
         },
         {
             "name": "Draw graph",
             "type": "python",
             "request": "launch",
-            "program": "draw_graph.py",
+            "program": "src/draw_graph.py",
             "console": "integratedTerminal",
             "args": [
-                "local.csv", "Russia", "local.png"
+                "out/local.csv", "Russia", "out/local.png"
             ]
         }
     ]
