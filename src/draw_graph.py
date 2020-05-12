@@ -58,7 +58,7 @@ def plot_approximation(dates, cases):
     plt.annotate(
         dates_range[max_id].strftime('%d-%b-%Y'),
         xy=(dates_range[max_id], logistic_values[max_id]), xycoords='data',
-        xytext=(0.6, 0.6), textcoords='axes fraction',
+        xytext=(0.45, 0.6), textcoords='axes fraction',
         arrowprops=dict(facecolor='black', width=2, headwidth=8, shrink=0.05),
         horizontalalignment='left', verticalalignment='top')
 
